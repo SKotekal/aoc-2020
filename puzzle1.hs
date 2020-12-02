@@ -16,7 +16,7 @@ multTupleElements3 :: (Int, Int, Int) -> Int
 multTupleElements3 (a,b, c) = a*b*c
 
 main = do
-    handle <- openFile "puzzle1a.txt" ReadMode
+    handle <- openFile "puzzle1.txt" ReadMode
     contents <- hGetContents handle
     let input = (f (lines contents))
     putStrLn (show (multTupleElements (head (filter (\(x,y) -> x+y == 2020) (cartProd input input))))) -- first star
